@@ -1,0 +1,307 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_terminal: true
+configure_macos: true
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - Safari
+  - Messages
+  - Mail
+  - Maps
+  - Photos
+  - FaceTime
+  - Calendar
+  - Contacts
+  - Reminders
+  - Notes
+  - TV
+  - Music
+  - Podcasts
+  - News
+  - Keynote
+  - Numbers
+  - Pages
+  - 'App Store'
+  - 'System Preferences'
+dockitems_persist:
+  - name: "Firefox"
+    path: "/Applications/Firefox.app"
+    pos: 1
+  - name: "Music"
+    path: "/System/Applications/Music.app"
+    pos: 2
+  - name: "Calendar"
+    path: "/System/Applications/Calendar.app"
+    pos: 3
+  - name: "Messages"
+    path: "/System/Applications/Messages.app"
+    pos: 4
+  - name: "Signal"
+    path: "/Applications/Signal.app"
+    pos: 5
+  - name: "Discord"
+    path: "/Applications/Discord.app"
+    pos: 6
+  - name: "Reminders"
+    path: "/System/Applications/Reminders.app"
+    pos: 7
+  - name: "Notes"
+    path: "/System/Applications/Notes.app"
+    pos: 8
+  - name: "Notion"
+    path: "/Applications/Notion.app"
+    pos: 9
+  - name: "Slack"
+    path: "/Applications/Slack.app"
+    pos: 10
+  - name: "Affinity Photo"
+    path: "/Applications/Affinity Photo.app"
+    pos: 11
+  - name: "Affinity Designer"
+    path: "/Applications/Affinity Designer.app"
+    pos: 12
+  - name: "Adobe Lightroom Classic"
+    path: "/Applications/Adobe Lightroom Classic.app"
+    pos: 13
+  - name: "Figma"
+    path: "/Applications/Figma.app"
+    pos: 14
+  - name: "SF Symbols"
+    path: "/Applications/SF Symbols.app"
+    pos: 15
+  - name: "Numbers"
+    path: "/Applications/Numbers.app"
+    pos: 16
+  - name: "Xcode"
+    path: "/Applications/Xcode.app"
+    pos: 17
+  - name: "Visual Studio Code"
+    path: "/Applications/Visual Studio Code.app"
+    pos: 18
+  - name: "Sublime Merge"
+    path: "/Applications/Sublime Merge.app"
+    pos: 19
+  - name: "Ray"
+    path: "/Applications/Ray.app"
+    pos: 20
+  - name: "Tinkerwell"
+    path: "/Applications/Tinkerwell.app"
+    pos: 21
+  - name: "TablePlus"
+    path: "/Applications/TablePlus.app"
+    pos: 22
+  - name: "Postman"
+    path: "/Applications/Postman.app"
+    pos: 23
+  - name: "Alacritty"
+    path: "/Applications/Alacritty.app"
+    pos: 24
+  - name: "System Preferences"
+    path: "/System/Applications/System Preferences.app"
+    pos: 25
+  - name: "Applications"
+    path: "/Applications"
+    pos: 26
+  - name: "Downloads"
+    path: "/Downloads"
+    pos: 27
+
+dotfiles_repo: https://github.com/othyn/dotfiles.git
+dotfiles_repo_version: main
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/git/dotfiles
+dotfiles_home: "~"
+dotfiles_files:
+  - .gitconfig
+  - .gitignore
+  - .hushlogin
+  - .macos
+  - .nuxtrc
+  - .prettierrc.yaml
+  - .zshrc
+  - .zshrc_aliases
+  - .zshrc_config
+  - .zshrc_functions
+  - .zshrc_plugins
+  - .zshrc_schedule
+  - .zshrc_theme
+
+homebrew_taps:
+  - buo/cask-upgrade
+  - homebrew/bundle
+  - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/cask-versions
+  - homebrew/core
+  - homebrew/services
+  - sticklerm3/pourhouse
+  - thezoraiz/ascii-image-converter
+homebrew_installed_packages:
+  - ansible
+  - argo
+  - asciinema
+  - autoconf
+  - automake
+  - autopep8
+  - awscli
+  - bash-completion
+  - bat
+  - bfg
+  - bit-git
+  - bpytop
+  - cmatrix
+  - cocoapods
+  - composer
+  - coreutils
+  - cowsay
+  - cpufetch
+  - curl
+  - diff-so-fancy
+  - docker
+  - docker-compose
+  - doctl
+  - entr
+  - ffmpeg
+  - fortune
+  - fswatch
+  - gdal
+  - geos
+  - gh
+  - git
+  - git-crypt
+  - glib
+  - gnupg
+  - go
+  - gobject-introspection
+  - gource
+  - grunt-cli
+  - helm
+  - htmlq
+  - htop
+  - httpie
+  - imagemagick
+  - jq
+  - kops
+  - kubernetes-cli
+  - kubeseal
+  - libproxy
+  - libspatialite
+  - libtool
+  - lolcat
+  - lsd
+  - mas
+  - minikube
+  - mkcert
+  - mysql
+  - ncdu
+  - neofetch
+  - nghttp2
+  - nnn
+  - node
+  - numpy
+  - php
+  - pinentry-mac
+  - pipenv
+  - pkg-config
+  - postgis
+  - postgresql
+  - prettyping
+  - pv
+  - pylint
+  - python
+  - ranger
+  - smartmontools
+  - speedread
+  - speedtest-cli
+  - swiftlint
+  - thezoraiz/ascii-image-converter/ascii-image-converter
+  - tldr
+  - tmux
+  - tree
+  - wget
+  - wimlib
+  - yadm
+  - yarn
+  - you-get
+  - youtube-dl
+  - yq
+  - zsh-syntax-highlighting
+  - zstd
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - 1password
+  - alacritty
+  - appcleaner
+  - betterzip
+  - docker
+  - dozer
+  - drawio
+  - figma
+  - firefox
+  - gemini
+  - handbrake
+  - istat-menus
+  - karabiner-elements
+  - logitech-camera-settings
+  - malwarebytes
+  - notion
+  - postman
+  - protonvpn
+  - raspberry-pi-imager
+  - rectangle
+  - rocket
+  - signal
+  - slack
+  - soundsource
+  - sublime-merge
+  - sublime-text
+  - synergy
+  - table-tool
+  - the-unarchiver
+  - transmit
+  - visual-studio-code
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_email: ""
+mas_password: ""
+mas_installed_apps:
+  - { id: 414209656, name: "Better Rename 9" }
+  - { id: 424390742, name: "Compressor" }
+  - { id: 411643860, name: "DaisyDisk" }
+  - { id: 1388020431, name: "DevCleaner" }
+  - { id: 1351639930, name: "Gifski" }
+  - { id: 408981434, name: "iMovie" }
+  - { id: 409183694, name: "Keynote" }
+  - { id: 1295203466, name: "Microsoft Remote Desktop" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 409201541, name: "Pages" }
+  - { id: 1468682448, name: "SentryCam" }
+  - { id: 497799835, name: "Xcode" }
+
+macos_script: "~/.macos --no-restart"
+
+composer_packages:
+  - name: "friendsofphp/php-cs-fixer"
+    state: present # present/absent, default: present
+    version: "^2.15" # default: N/A
+  - name: "laravel/installer"
+    state: present # present/absent, default: present
+    version: "^4.0" # default: N/A
+
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
