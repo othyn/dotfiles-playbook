@@ -237,9 +237,10 @@ homebrew_cask_apps:
   - 1password
   - alacritty
   - appcleaner
+  - bartender
   - betterzip
+  - discord
   - docker
-  - dozer
   - drawio
   - figma
   - firefox
@@ -261,8 +262,10 @@ homebrew_cask_apps:
   - sublime-merge
   - sublime-text
   - synergy
+  - tableplus
   - table-tool
   - the-unarchiver
+  - transmission
   - transmit
   - visual-studio-code
 
@@ -270,18 +273,18 @@ homebrew_cask_apps:
 mas_email: ""
 mas_password: ""
 mas_installed_apps:
-  - { id: 414209656, name: "Better Rename 9" }
-  - { id: 424390742, name: "Compressor" }
-  - { id: 411643860, name: "DaisyDisk" }
+  - { id: 414209656,  name: "Better Rename 9" }
+  - { id: 424390742,  name: "Compressor" }
+  - { id: 411643860,  name: "DaisyDisk" }
   - { id: 1388020431, name: "DevCleaner" }
   - { id: 1351639930, name: "Gifski" }
-  - { id: 408981434, name: "iMovie" }
-  - { id: 409183694, name: "Keynote" }
+  - { id: 408981434,  name: "iMovie" }
+  - { id: 409183694,  name: "Keynote" }
   - { id: 1295203466, name: "Microsoft Remote Desktop" }
-  - { id: 409203825, name: "Numbers" }
-  - { id: 409201541, name: "Pages" }
+  - { id: 409203825,  name: "Numbers" }
+  - { id: 409201541,  name: "Pages" }
   - { id: 1468682448, name: "SentryCam" }
-  - { id: 497799835, name: "Xcode" }
+  - { id: 497799835,  name: "Xcode" }
 
 macos_script: "~/.macos --no-restart"
 
