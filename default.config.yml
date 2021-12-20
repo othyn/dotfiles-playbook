@@ -111,7 +111,7 @@ dockitems_persist:
     path: "/Downloads"
     pos: 27
 
-dotfiles_repo: https://github.com/othyn/dotfiles.git
+dotfiles_repo: git@github.com:othyn/dotfiles
 dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/git/dotfiles
@@ -216,6 +216,7 @@ homebrew_installed_packages:
   - python
   - ranger
   - smartmontools
+  - spaceship
   - speedread
   - speedtest-cli
   - swiftlint
@@ -230,6 +231,7 @@ homebrew_installed_packages:
   - you-get
   - youtube-dl
   - yq
+  - zsh
   - zsh-syntax-highlighting
   - zstd
 homebrew_cask_appdir: /Applications
@@ -293,13 +295,25 @@ composer_packages:
     state: present # present/absent, default: present
     version: "^2.15" # default: N/A
   - name: "laravel/installer"
-    state: present # present/absent, default: present
-    version: "^4.0" # default: N/A
+    state: present
+    version: "^4.0"
 
-npm_packages: []
-# - name: webpack
-#   state: present # present/absent/latest, default: present
-#   version: "^2.6" # default: N/A
+yarn_packages:
+  - name: "@vue/cli"
+    state: present # present/absent/latest, default: present
+    version: "^4.2.3" # default: N/A
+  - name: "create-nuxt-app"
+    state: present
+    version: "^3.7.1"
+  - name: "node-pre-gyp"
+    state: present
+    version: "^0.14.0"
+  - name: "tslint"
+    state: present
+    version: "^5.20.1"
+  - name: "typescript"
+    state: present
+    version: "^3.7.4"
 
 pip_packages: []
 # - name: mkdocs

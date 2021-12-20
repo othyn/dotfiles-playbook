@@ -11,6 +11,32 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
 
+    # macOS now ships with ZSH by default, so this assumes that
+    - name: Get the path to ZSH
+      become: false
+      local_action: command which zsh
+      register: zsh_path
+
+    - name: "Ensure homebrew zsh is in allowed shells"
+      lineinfile:
+        path: /etc/shells
+        line: "{{ zsh_path.stdout }}"
+      become: true
+
+    - name: Install Oh My ZSH
+      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      args:
+        creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh"
+
+    - name: Set ZSH as the default shell
+      shell: chsh -s $(which zsh) {{ lookup('env', 'USER') }}
+      become: true
+
+    - name: Install zsh-autosuggestions plugin
+      shell: git clone https://github.com/zsh-users/zsh-autosuggestions /Users/{{ lookup('env', 'USER') }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+      args:
+        creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+
   roles:
     - role: elliotweiser.osx-command-line-tools
       # Install Mac Apps first, as Xcode is a dependency on a lot of brew stuff
@@ -35,8 +61,8 @@
     - import_tasks: tasks/composer.yml
       tags: ['composer']
 
-    - import_tasks: tasks/npm.yml
-      tags: ['npm']
+    - import_tasks: tasks/yarn.yml
+      tags: ['yarn']
 
     - import_tasks: tasks/pip.yml
       tags: ['pip']
