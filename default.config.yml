@@ -71,45 +71,42 @@ dockitems_persist:
   - name: "Figma"
     path: "/Applications/Figma.app"
     pos: 14
-  - name: "SF Symbols"
-    path: "/Applications/SF Symbols.app"
-    pos: 15
   - name: "Numbers"
     path: "/Applications/Numbers.app"
-    pos: 16
+    pos: 15
   - name: "Xcode"
     path: "/Applications/Xcode.app"
-    pos: 17
+    pos: 16
   - name: "Visual Studio Code"
     path: "/Applications/Visual Studio Code.app"
-    pos: 18
+    pos: 17
   - name: "Sublime Merge"
     path: "/Applications/Sublime Merge.app"
-    pos: 19
+    pos: 18
   - name: "Ray"
     path: "/Applications/Ray.app"
-    pos: 20
+    pos: 19
   - name: "Tinkerwell"
     path: "/Applications/Tinkerwell.app"
-    pos: 21
+    pos: 20
   - name: "TablePlus"
     path: "/Applications/TablePlus.app"
-    pos: 22
+    pos: 21
   - name: "Postman"
     path: "/Applications/Postman.app"
-    pos: 23
+    pos: 22
   - name: "Alacritty"
     path: "/Applications/Alacritty.app"
-    pos: 24
+    pos: 23
   - name: "System Preferences"
     path: "/System/Applications/System Preferences.app"
-    pos: 25
+    pos: 24
   - name: "Applications"
     path: "/Applications"
-    pos: 26
+    pos: 25
   - name: "Downloads"
     path: "/Downloads"
-    pos: 27
+    pos: 26
 
 dotfiles_repo: git@github.com:othyn/dotfiles
 dotfiles_repo_version: main
@@ -256,6 +253,7 @@ homebrew_cask_apps:
   - postman
   - protonvpn
   - raspberry-pi-imager
+  - ray
   - rectangle
   - rocket
   - signal
@@ -267,6 +265,7 @@ homebrew_cask_apps:
   - tableplus
   - table-tool
   - the-unarchiver
+  - tinkerwell
   - transmission
   - transmit
   - visual-studio-code
