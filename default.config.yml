@@ -32,9 +32,6 @@ dockitems_persist:
   - name: "Firefox"
     path: "/Applications/Firefox.app"
     pos: 1
-  - name: "Music"
-    path: "/System/Applications/Music.app"
-    pos: 2
   - name: "Calendar"
     path: "/System/Applications/Calendar.app"
     pos: 3
@@ -53,11 +50,14 @@ dockitems_persist:
   - name: "Notes"
     path: "/System/Applications/Notes.app"
     pos: 8
-  - name: "Notion"
-    path: "/Applications/Notion.app"
-    pos: 9
   - name: "Slack"
     path: "/Applications/Slack.app"
+    pos: 10
+  - name: "Plex"
+    path: "/Applications/Plex.app"
+    pos: 10
+  - name: "Plexamp"
+    path: "/Applications/Plexamp.app"
     pos: 10
   - name: "Affinity Photo"
     path: "/Applications/Affinity Photo.app"
@@ -68,9 +68,12 @@ dockitems_persist:
   - name: "Adobe Lightroom Classic"
     path: "/Applications/Adobe Lightroom Classic.app"
     pos: 13
-  - name: "Figma"
-    path: "/Applications/Figma.app"
-    pos: 14
+  - name: "darktable"
+    path: "/Applications/darktable.app"
+    pos: 13
+  - name: "FastRawViewer"
+    path: "/Applications/FastRawViewer.app"
+    pos: 13
   - name: "Numbers"
     path: "/Applications/Numbers.app"
     pos: 15
@@ -95,8 +98,11 @@ dockitems_persist:
   - name: "Postman"
     path: "/Applications/Postman.app"
     pos: 22
-  - name: "Alacritty"
-    path: "/Applications/Alacritty.app"
+  - name: "Boop"
+    path: "/Applications/Boop.app"
+    pos: 23
+  - name: "iTerm"
+    path: "/Applications/iTerm.app"
     pos: 23
   - name: "System Preferences"
     path: "/System/Applications/System Preferences.app"
@@ -209,6 +215,7 @@ homebrew_installed_packages:
   - postgresql
   - prettyping
   - pv
+  - pyenv
   - pylint
   - python
   - ranger
@@ -223,7 +230,6 @@ homebrew_installed_packages:
   - tree
   - wget
   - wimlib
-  - yadm
   - yarn
   - you-get
   - youtube-dl
@@ -233,44 +239,55 @@ homebrew_installed_packages:
   - zstd
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - 1password
   - affinity-designer
   - affinity-photo
-  - alacritty
+  - aldente
   - appcleaner
   - bartender
   - betterzip
+  - bitwarden
+  - boop
+  - daisydisk
+  - darktable
   - discord
   - docker
   - drawio
+  - fastrawviewer
   - figma
   - firefox
   - gemini
   - handbrake
   - istat-menus
+  - iterm2
   - karabiner-elements
+  - little-snitch
   - logitech-camera-settings
   - malwarebytes
+  - modern-csv
   - notion
+  - plex
+  - plexamp
   - postman
   - protonvpn
   - raspberry-pi-imager
   - ray
   - rectangle
+  - retroarch-metal
   - rocket
   - signal
   - slack
   - soundsource
+  - steam
   - sublime-merge
   - sublime-text
   - synergy
   - tableplus
-  - table-tool
   - the-unarchiver
   - tinkerwell
   - transmission
   - transmit
   - visual-studio-code
+  - vlc
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_email: ""
@@ -294,10 +311,10 @@ macos_script: "~/.macos --no-restart"
 composer_packages:
   - name: "friendsofphp/php-cs-fixer"
     state: present # present/absent, default: present
-    version: "^2.15" # default: N/A
+    version: "^3.6.0" # default: N/A
   - name: "laravel/installer"
     state: present
-    version: "^4.0"
+    version: "^4.2.10"
 
 yarn_packages:
   - name: "@vue/cli"

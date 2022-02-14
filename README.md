@@ -8,6 +8,53 @@ This playbook installs and configures most of the software I use on my Mac for w
 
 This repo is based from Jeff Geerling's incredible [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) repo.
 
+## Pre-requirements
+
+These were the steps that I _personally_ had to undertake prior to running any of the following setup steps to get the
+machine how I like it. These may differ based on your preferences.
+
+1. Go through initial OOTB setup and create a new macOS account!
+2. (Setup account)
+   Set Password
+   Touch ID setup, all options checked
+   Logged in to Apple ID
+   Tamed iCloud
+   Set Monterey user profile picture to Memoji so its animated!
+
+Battery > Optimise video streaming while on battery (cannot set via defaults)
+
+Users & Groups > Ben Tindall > Allow user to reset password using Apple ID (cannot set via defaults)
+
+Software Update > Advanced > [x] Check for updates (cannot set via defaults)
+Software Update > Advanced > [x] Download new updates when available (cannot set via defaults)
+Software Update > Advanced > [x] Install system data files and security updates (cannot set via defaults)
+
+Security & Privacy > General > Use your Apple Watch to unlock apps and your Mac (cannot set via defaults)
+Security & Privacy > FileVault > Turn On FileVault… (allow iCloud account to unlock the disk) (cannot set via defaults)
+
+Displays > Night Shift… > Schedule: (Sunset to Sunrise) (cannot set via defaults)
+
+Installed brew from brew.sh (Xcode tools + shitty 1.2MB/s download…)
+Set FireFox as default browser
+Logged into FireFox
+AirDrop’d ~/.ssh over to this new machine from the old one
+mkdir ~/git
+git clone git@github.com:othyn/mac-dev-playbook.git ~/git/mac-dev-playbook
+brew install --cask visual-studio-code
+code ~/git/mac-dev-playbook
+Turned on settings sync with my GitHub account
+Installed the MonoLisa font via AirDrop
+git clone git@github.com:othyn/dotfiles.git ~/git/dotfiles
+Cleaned out the forked dot files repo, copying across old dot files via AirDrop and placing them into the new repo
+Copied across .aws via AirDrop
+brew install --cask sublime-merge
+Brew install --cask rocket
+Set licence key for Rocket
+Copied across iStat config under File > Import settings… from stat.ismp
+Turned on iCloud messsage sync in Messages > Preferences > iMessage > Enable Messages in iCloud
+Turned off iCloud Photos
+Battery > Power Adaptor > Prevent your Mac from automatically sleeping when the display is off
+
 ## Installation
 
 1. Install [Homebrew](https://brew.sh/):
@@ -30,7 +77,7 @@ brew install ansible
 
 ### Running a specific set of tagged tasks
 
-You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag. The tags available are `dotfiles`, `homebrew`, `mas`, `composer`, `npm`, `pip` and `macos`.
+You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag. The tags available are `ohmyzsh`, `dotfiles`, `homebrew`, `mas`, `composer`, `yarn`, `pip` and `macos`.
 
 ```sh
 ansible-playbook main.yml -K --tags "dotfiles,homebrew"
@@ -63,7 +110,7 @@ gem_packages:
   - name: bundler
     state: latest
 
-npm_packages:
+yarn_packages:
   - name: webpack
 
 pip_packages:
