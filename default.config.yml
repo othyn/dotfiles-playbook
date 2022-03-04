@@ -65,12 +65,6 @@ dockitems_persist:
   - name: "Affinity Designer"
     path: "/Applications/Affinity Designer.app"
     pos: 12
-  - name: "Adobe Lightroom Classic"
-    path: "/Applications/Adobe Lightroom Classic.app"
-    pos: 13
-  - name: "darktable"
-    path: "/Applications/darktable.app"
-    pos: 13
   - name: "FastRawViewer"
     path: "/Applications/FastRawViewer.app"
     pos: 13
@@ -248,7 +242,6 @@ homebrew_cask_apps:
   - bitwarden
   - boop
   - daisydisk
-  - darktable
   - discord
   - docker
   - drawio
@@ -263,7 +256,9 @@ homebrew_cask_apps:
   - little-snitch
   - logitech-camera-settings
   - malwarebytes
+  - mediainfo
   - modern-csv
+  - mysqlworkbench
   - notion
   - plex
   - plexamp
@@ -288,6 +283,7 @@ homebrew_cask_apps:
   - transmit
   - visual-studio-code
   - vlc
+  - xcodes
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_email: ""
