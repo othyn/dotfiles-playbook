@@ -50,6 +50,9 @@ dockitems_persist:
   - name: "Notes"
     path: "/System/Applications/Notes.app"
     pos: 8
+  - name: "Notion"
+    path: "/Applications/Notion.app"
+    pos: 9
   - name: "Slack"
     path: "/Applications/Slack.app"
     pos: 10
@@ -141,6 +144,7 @@ homebrew_taps:
 homebrew_installed_packages:
   - ansible
   - argo
+  - create-dmg
   - asciinema
   - autoconf
   - automake
@@ -179,6 +183,9 @@ homebrew_installed_packages:
   - grunt-cli
   - helm
   - htmlq
+  - influxdb@1
+  - terraform
+  - terrahelp
   - htop
   - httpie
   - imagemagick
@@ -217,7 +224,7 @@ homebrew_installed_packages:
   - spaceship
   - speedread
   - speedtest-cli
-  - swiftlint
+  - swiftlint # sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
   - thezoraiz/ascii-image-converter/ascii-image-converter
   - tldr
   - tmux
@@ -236,9 +243,13 @@ homebrew_cask_apps:
   - affinity-designer
   - affinity-photo
   - aldente
+  - bettermouse
+  - alfred
   - appcleaner
+  - musicbrainz-picard
+  - monitorcontrol
+  - sf-symbols
   - bartender
-  - betterzip
   - bitwarden
   - boop
   - daisydisk
@@ -277,13 +288,15 @@ homebrew_cask_apps:
   - sublime-text
   - synergy
   - tableplus
-  - the-unarchiver
+  - table-tool
   - tinkerwell
   - transmission
   - transmit
   - visual-studio-code
   - vlc
   - xcodes
+  - itch
+  - keka
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_email: ""

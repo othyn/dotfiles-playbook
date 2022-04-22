@@ -8,6 +8,11 @@ This playbook installs and configures most of the software I use on my Mac for w
 
 This repo is based from Jeff Geerling's incredible [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) repo.
 
+## TODO
+
+- Ansible sudo softwareupdate --install-rosetta
+- Install crontab
+
 ## Pre-requirements
 
 These were the steps that I _personally_ had to undertake prior to running any of the following setup steps to get the
