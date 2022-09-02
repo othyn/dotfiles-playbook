@@ -26,8 +26,8 @@ dockitems_remove:
   - Keynote
   - Numbers
   - Pages
-  - 'App Store'
-  - 'System Preferences'
+  - "App Store"
+  - "System Preferences"
 dockitems_persist:
   - name: "Firefox"
     path: "/Applications/Firefox.app"
@@ -148,6 +148,7 @@ homebrew_installed_packages:
   - asciinema
   - autoconf
   - automake
+  - iproute2mac
   - autopep8
   - awscli
   - bash-completion
@@ -218,6 +219,7 @@ homebrew_installed_packages:
   - pv
   - pyenv
   - pylint
+  - derailed/k9s/k9s
   - python
   - ranger
   - smartmontools
@@ -234,7 +236,12 @@ homebrew_installed_packages:
   - yarn
   - you-get
   - youtube-dl
+  - fileicon
+  - folderify
+  - fastlane
+  - rsync
   - yq
+  - pnpm
   - zsh
   - zsh-syntax-highlighting
   - zstd
@@ -242,9 +249,19 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - affinity-designer
   - affinity-photo
-  - aldente
+  - godot
+  - airbuddy
+  - stringz
+  - figma
+  - swiftbar
+  - blender
+  - mkvtoolnix
+  - jdownloader
+  - cyberduck
+  - keepingyouawake
+  # - aldente
   - bettermouse
-  - alfred
+  # - alfred
   - appcleaner
   - musicbrainz-picard
   - monitorcontrol
@@ -262,6 +279,7 @@ homebrew_cask_apps:
   - gemini
   - handbrake
   - istat-menus
+  # - https://github.com/exelban/stats
   - iterm2
   - karabiner-elements
   - little-snitch
@@ -276,6 +294,7 @@ homebrew_cask_apps:
   - postman
   - protonvpn
   - raspberry-pi-imager
+  - insomnia
   - ray
   - rectangle
   - retroarch-metal
@@ -302,18 +321,18 @@ homebrew_cask_apps:
 mas_email: ""
 mas_password: ""
 mas_installed_apps:
-  - { id: 414209656,  name: "Better Rename 9" }
-  - { id: 424390742,  name: "Compressor" }
-  - { id: 411643860,  name: "DaisyDisk" }
+  - { id: 414209656, name: "Better Rename 9" }
+  - { id: 424390742, name: "Compressor" }
+  - { id: 411643860, name: "DaisyDisk" }
   - { id: 1388020431, name: "DevCleaner" }
   - { id: 1351639930, name: "Gifski" }
-  - { id: 408981434,  name: "iMovie" }
-  - { id: 409183694,  name: "Keynote" }
+  - { id: 408981434, name: "iMovie" }
+  - { id: 409183694, name: "Keynote" }
   - { id: 1295203466, name: "Microsoft Remote Desktop" }
-  - { id: 409203825,  name: "Numbers" }
-  - { id: 409201541,  name: "Pages" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 409201541, name: "Pages" }
   - { id: 1468682448, name: "SentryCam" }
-  - { id: 497799835,  name: "Xcode" }
+  - { id: 497799835, name: "Xcode" }
 
 macos_script: "~/.macos --no-restart"
 
@@ -341,6 +360,9 @@ yarn_packages:
   - name: "typescript"
     state: present
     version: "^3.7.4"
+  - name: "docsify-cli"
+    state: present
+    version: "^4.4.4"
 
 pip_packages: []
 # - name: mkdocs

@@ -12,6 +12,8 @@ This repo is based from Jeff Geerling's incredible [mac-dev-playbook](https://gi
 
 - Ansible sudo softwareupdate --install-rosetta
 - Install crontab
+- SMB <> macOS <> Unraid fixes:
+  - https://gist.github.com/othyn/4554c1f409f34d1674ba2095acf441ee
 
 ## Pre-requirements
 
